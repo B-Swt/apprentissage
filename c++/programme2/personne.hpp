@@ -1,16 +1,19 @@
 #include <string>
+#include <vector>
+#include <exception>
 #include <iostream>
 
 class Person {
     private:
         std::string name_;
         unsigned short age_;
+        std::vector<Person> users;
 
     public:
-        Person(const std::string& name, unsigned short age) : name_(name), age_(age) {}
+        Person();
+        Person(const std::string& name, unsigned short age);
 
     public:
-        void introduce() const {
-            std::cout << "Bonjour, vous êtes " << name_ << " et vous avez " << age_ << " ans." << std::endl;
-        }
+        void addUser(Person& p );
+        void showUsers() const;
 };
