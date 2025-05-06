@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 
 const char* sentence(unsigned short age) {
     if (age <= 10 )
